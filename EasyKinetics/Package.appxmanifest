@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/windowsTemplateStudio" xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" IgnorableNamespaces="uap mp genTemplate iot">
+  <Identity Name="8734Bioinformatictools.Easykinetics" Publisher="CN=6DD1C59E-2C34-420F-81D6-3DFFB231920A" Version="4.1.1.0" />
+  <mp:PhoneIdentity PhoneProductId="58ef4f6e-4659-4364-824b-a6a7ec72c6e6" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Easy kinetics</DisplayName>
+    <PublisherDisplayName>Bioinformatic Gears</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="EasyKinetics.App">
+      <uap:VisualElements DisplayName="ms-resource:AppDisplayName" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Easy_Kinetics is a software created with the aim of simplifying the study of enzymatic kinetics conducted in biochemical laboratories all over the world. This software can perform the same complete kinetic analysis for any enzyme but needing with a more limited number of spectrophotometric measuration compared to traditional softwares, showing in this way the following advantages: save the time of the researcher; save materials and money needed to perform the experiment; facilitate the work of both experienced and novice students/researcher; minimize experimental errors expected from multiple measurements. Furthermore Easy_Kinetics has been implemented to perform enzymatic inhibition studies, Bradford assays, enzymatic units assays and to calculate the variation in absorbance per minute of a sample. Finally, the software is optimized to self-detect possible substrate inhibitions kinetics and to self-correct any insertion errors (eg &quot;*&quot;, &quot;a&quot;) in the various input fields." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.appService" Executable="EasyKinetics.exe" EntryPoint="EasyKinetics.app">
+          <uap:AppService Name="EasyKinetics" />
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <genTemplate:Metadata>
+    <genTemplate:Item Name="generator" Value="Windows Template Studio" />
+    <genTemplate:Item Name="wizardVersion" Version="v2.4.18260.1" />
+    <genTemplate:Item Name="templatesVersion" Version="v2.4.18260.1" />
+    <genTemplate:Item Name="projectType" Value="TabbedPivot" />
+    <genTemplate:Item Name="framework" Value="CodeBehind" />
+    <genTemplate:Item Name="platform" Value="Uwp" />
+  </genTemplate:Metadata>
+  <Capabilities>
+    <iot:Capability Name="systemManagement" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,151 @@
+﻿<Page
+    x:Class="EasyKinetics.Views.TabbedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+        <Pivot
+            x:Name="Items">
+            <PivotItem x:Uid="Tabbed_PivotItem1">
+                <PivotItem.Header>
+                    <TextBlock Height="20" Width="100" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Text="Data" FocusVisualSecondaryBrush="#99FFFFFF"/>
+                </PivotItem.Header>
+                <Grid Background="#FFCFCFCF" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                    <Image x:Name="Image_logo" HorizontalAlignment="Left" Height="80" Margin="450,25,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/StoreLogo.scale-125.png" Grid.Column="1"/>
+                    <TextBlock x:Name="TextBlock_logo" HorizontalAlignment="Left" Margin="550,25,0,0" Text="EasyKinetics" VerticalAlignment="Top" Height="80" Width="600" FontFamily="AR DELANEY" FontSize="72" FontStyle="Italic" FontWeight="Bold" Foreground="Red" Grid.Column="1"/>
+                    <Button x:Name="Simple_Enzyme_Kinetics" Content="Simple Enzyme&#xD;&#xA;Kinetics" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Background="#33474747" Padding="5,4,8,4" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Opacity="1" Height="60" Width="120" BorderThickness="2,2,2,2" BorderBrush="#FF080808" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="Inhibition_Kinetics" Content="Inhibition&#xD;&#xA;Kinetics" HorizontalAlignment="Left" Margin="25,270,0,0" VerticalAlignment="Top" Background="#33474747" Padding="5,4,8,4" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Opacity="1" Height="60" Width="120" BorderThickness="2,2,2,2" BorderBrush="#FF080808"/>
+                    <Button x:Name="Enzymatic_Units_Assay" Content="Enzymatic&#xD;&#xA;Units Assay" HorizontalAlignment="Left" Margin="25,360,0,0" VerticalAlignment="Top" Background="#33474747" Padding="5,4,8,4" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Opacity="1" Height="60" Width="120" BorderThickness="2,2,2,2" BorderBrush="#FF080808"/>
+                    <Button x:Name="Calculation_of_dA_min" Content="Calculation&#xD;&#xA;of dA/min" HorizontalAlignment="Left" Margin="25,450,0,0" VerticalAlignment="Top" Background="#33474747" Padding="5,4,8,4" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Opacity="1" Height="60" Width="120" BorderThickness="2,2,2,2" BorderBrush="#FF080808"/>
+                    <Button x:Name="Bradford_Assay" Content="Bradford&#xD;&#xA;Assay" HorizontalAlignment="Left" Margin="25,540,0,0" VerticalAlignment="Top" Background="#33474747" Padding="5,4,8,4" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Opacity="1" Height="60" Width="120" BorderThickness="2,2,2,2" BorderBrush="#FF080808"/>
+
+                    <Canvas HorizontalAlignment="Left" Height="549" Margin="175,125,0,0" VerticalAlignment="Top" Width="1095" Background="White" Visibility="Visible">
+
+                        <TextBlock x:Name="EK1_title_1" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Width="500" FocusVisualSecondaryBrush="White" Height="30" Canvas.Left="250" Canvas.Top="10" Text="SIMPLE ENZYME KINETICS (enzymes with one limiting substrate):" FontWeight="Bold"/>
+                        <TextBlock
+                            x:Name="EK1_title_2" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="14" Width="1025" FocusVisualSecondaryBrush="White" Height="60" Canvas.Left="25" Canvas.Top="40"><Run Text="Prepare 6 samples containing an equal dilution of the starting enzyme solution, then put in 2 samples a substrate concentration of 15"/><Run Text=" "/><Run FontFamily="Symbol" Text="m"/><Run Text=" "/><Run Text="M, in 2 other samples a substrate concentration of 25"/><Run Text=" "/><Run FontFamily="Symbol" Text="m"/><Run Text=" "/><Run Text="M and in the last 2 samples a substrate concentration of 100"/><Run Text=" "/><Run FontFamily="Symbol" Text="m"/><Run Text=" "/><Run Text="M."/><Run Text=" Finally report following the d(Abs)/min of the samples exposed to the specific wavelength of the reporter product."/></TextBlock>
+                        <Rectangle HorizontalAlignment="Stretch" Height="5" Canvas.Top="110" VerticalAlignment="Stretch" Width="1095" Fill="#FF464646"/>
+
+                        <TextBlock x:Name="EK1_x1_text" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="12" Width="20" FocusVisualSecondaryBrush="White" Height="24" Canvas.Left="25" Canvas.Top="500" Text="x1"/>
+                        <TextBox x:Name="EK1_x1" Canvas.Left="50" Canvas.Top="500" Text="0" Background="#FFF9B4B4" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalTextAlignment="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="24" IsReadOnly="True" Visibility="Visible" Loaded="EK1_x1_Loaded"/>
+                        <TextBlock x:Name="EK1_x2_text" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="12" Width="20" FocusVisualSecondaryBrush="White" Height="24" Canvas.Left="175" Canvas.Top="500" Text="x2"/>
+                        <TextBox x:Name="EK1_x2" Canvas.Left="200" Canvas.Top="500" Text="0" Background="#FFF9B4B4" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalTextAlignment="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="24" IsReadOnly="True" Visibility="Visible" Loaded="EK1_x2_Loaded"/>
+
+                        <TextBlock
+                            x:Name="EK_dAbsmin_15_text" Canvas.Left="25" Canvas.Top="130" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="400" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0">
+                            <Run Text="Insert d(Abs)/min when the substrate concentration is 15"/>
+                            <Run Text="m" FontFamily="Symbol"/>
+                            <Run Text="M :"/>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_15a_text" Canvas.Left="50" Canvas.Top="160" Text="First sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+                        <TextBox x:Name="EK1_dAbsmin_15a" Canvas.Left="150" Canvas.Top="156" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalTextAlignment="Right" KeyDown="EK1_dAbsmin_15a_KeyDown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="24" AcceptsReturn="True" TextChanged="EK1_dAbsmin_15a_TextChanged"/>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_15b_text" Canvas.Left="50" Canvas.Top="190" Text="Second sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+                        <TextBox x:Name="EK1_dAbsmin_15b" Canvas.Left="150" Canvas.Top="186" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_dAbsmin_15b_KeyDown" MinHeight="24" AcceptsReturn="True" TextChanged="EK1_dAbsmin_15b_TextChanged"/>
+                        <TextBox x:Name="EK1_dAbsmin_15tot" Canvas.Left="300" Canvas.Top="156" Text="0" Background="#FFF9B4B4" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalTextAlignment="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="24" IsReadOnly="True" Visibility="Visible"/>
+
+                        <TextBlock
+                            x:Name="EK_dAbsmin_25_text" Canvas.Left="25" Canvas.Top="230" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="400" Height="20" HorizontalTextAlignment="Left">
+                            <Run Text="Insert d(Abs)/min when the substrate concentration is 25"/>
+                            <Run Text="m" FontFamily="Symbol"/>
+                            <Run Text="M :"/>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_25a_text" Canvas.Left="50" Canvas.Top="260" Text="First sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+
+                        <TextBox x:Name="EK1_dAbsmin_25a" Canvas.Left="150" Canvas.Top="256" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_dAbsmin_25a_KeyDown" MinHeight="24"/>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_25b_text" Canvas.Left="48" Canvas.Top="290" Text="Second sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+
+                        <TextBox x:Name="EK1_dAbsmin_25b" Canvas.Left="150" Canvas.Top="286" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_dAbsmin_25b_KeyDown" MinHeight="24"/>
+
+                        <TextBlock
+                            x:Name="EK_dAbsmin_100_text" Canvas.Left="25" Canvas.Top="330" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="400" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0">
+                            <Run Text="Insert d(Abs)/min when the substrate concentration is 100"/>
+                            <Run Text="m" FontFamily="Symbol"/>
+                            <Run Text="M :"/>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_100a_text" Canvas.Left="50" Canvas.Top="360" Text="First sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+                        <TextBox x:Name="EK1_dAbsmin_100a" Canvas.Left="150" Canvas.Top="356" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_dAbsmin_100a_KeyDown" MinHeight="24"/>
+                        <TextBlock
+                            x:Name="EK_dAbsmin_100b_text" Canvas.Left="50" Canvas.Top="390" Text="Second sample" TextWrapping="Wrap" FontSize="12" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left"/>
+                        <TextBox x:Name="EK1_dAbsmin_100b" Canvas.Left="150" Canvas.Top="386" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_dAbsmin_100b_KeyDown" MinHeight="24"/>
+
+                        <TextBlock x:Name="EK1_Vmaxa_text" Canvas.Left="25" Canvas.Top="430" Text="V" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="12" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_Vmaxb_text" Canvas.Left="37" Canvas.Top="435" Text="max" FontSize="10" TextWrapping="Wrap" FontWeight="Bold" Width="30" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Vmax" Canvas.Left="67" Canvas.Top="426" Text="0" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" InputScope="Number" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+                        <TextBlock x:Name="EK1_Vmaxc_text" Canvas.Left="167" Canvas.Top="430" Text=" dA/min" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="72" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_Kma_text" Canvas.Left="25" Canvas.Top="460" Text="K" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="12" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_Kmb_text" Canvas.Left="37" Canvas.Top="465" Text="m" FontSize="10" TextWrapping="Wrap" FontWeight="Bold" Width="30" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Km" Canvas.Left="67" Canvas.Top="456" Text="0" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" InputScope="Number" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+                        <TextBlock x:Name="EK1_Kmc_text" Canvas.Left="167" Canvas.Top="460" Text=" m" FontFamily="Symbol" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="12" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_Kmd_text" Canvas.Left="177" Canvas.Top="460" Text=" M" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="24" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_Mec_text" Canvas.Left="450" Canvas.Top="150" Text="Molar extinction coefficient" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="180" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Mec" Canvas.Left="670" Canvas.Top="146" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_Mec_KeyDown" MinHeight="24"/>
+
+                        <TextBlock x:Name="EK1_OpticalPatha_text" Canvas.Left="450" Canvas.Top="180" Text="Optical path" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="180" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_OpticalPath" Canvas.Left="670" Canvas.Top="176" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_OpticalPath_KeyDown" MinHeight="24"/>
+                        <TextBlock x:Name="EK1_OpticalPathb_text" Canvas.Left="770" Canvas.Top="180" Text=" cm" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="24" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_InitSolVola_text" Canvas.Left="450" Canvas.Top="210" Text="Volume of the initial solution from which the enzyme is taken" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="180" Height="40" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_InitSolVol" Canvas.Left="670" Canvas.Top="216" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_InitSolVol_KeyDown" MinHeight="24"/>
+                        <TextBlock x:Name="EK1_InitSolVolb_text" Canvas.Left="770" Canvas.Top="220" Text=" m" FontFamily="Symbol" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="12" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_InitSolVolc_text" Canvas.Left="782" Canvas.Top="220" Text="l" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="24" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_FinSolVola_text" Canvas.Left="450" Canvas.Top="250" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="180" Height="40" HorizontalTextAlignment="Left" Margin="0,0,0,0"><Run Text="Total volume of the "/><LineBreak/><Run Text="final solution"/></TextBlock>
+                        <TextBox x:Name="EK1_FinSolVol" Canvas.Left="670" Canvas.Top="256" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_FinSolVol_KeyDown" MinHeight="24"/>
+                        <TextBlock x:Name="EK1_FinSolVolb_text" Canvas.Left="770" Canvas.Top="260" Text=" m" FontFamily="Symbol" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="24" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_FinSolVolc_text" Canvas.Left="782" Canvas.Top="260" Text="l" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="24" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_Unitsml_text" Canvas.Left="850" Canvas.Top="150" Text="Units/ml" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="80" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Unitsml" Canvas.Left="950" Canvas.Top="146" Text="0" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" InputScope="Number" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+
+                        <TextBlock x:Name="EK1_Kcata_text" Canvas.Left="850" Canvas.Top="180" Text="K" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="12" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_Kcatb_text" Canvas.Left="860" Canvas.Top="185" Text="cat" FontSize="10" TextWrapping="Wrap" FontWeight="Bold" Width="88" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Kcat" Canvas.Left="950" Canvas.Top="176" Text="0" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" InputScope="Number" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+
+                        <TextBlock x:Name="EK1_CatalEff_text" Canvas.Left="850" Canvas.Top="210" Text="Catalytic efficiency : 10^" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="140" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_CatalEff" Canvas.Left="990" Canvas.Top="210" Text="0" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="20" HorizontalContentAlignment="Right" Margin="0,0,0,0" InputScope="Number" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="10" MinWidth="63" Width="60" Background="#66E3F907" Padding="5,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_SubstrateConca_text" Canvas.Left="450" Canvas.Top="350" Text="Chosen substrate concentration" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="210" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_SubstrateConc" Canvas.Left="670" Canvas.Top="346" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_SubstrateConc_KeyDown" MinHeight="24"/>
+                        <TextBlock x:Name="EK1_SubstrateConcb_text" Canvas.Left="770" Canvas.Top="350" Text=" m" FontFamily="Symbol" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="20" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_SubstrateConcc_text" Canvas.Left="782" Canvas.Top="350" Text="M" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="20" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                        <TextBlock x:Name="EK1_EnzymeSubUnits_text" Canvas.Left="450" Canvas.Top="380" Text="Number of enzyme subunits" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="210" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_EnzymeSubUnits" Canvas.Left="670" Canvas.Top="376" Text="0" Background="White" BorderBrush="#FF646464" Width="100" Height="24" FontSize="12" InputScope="Number" HorizontalContentAlignment="Right" KeyDown="EK1_EnzymeSubUnits_KeyDown" MinHeight="24"/>
+
+                        <TextBlock x:Name="EK1_EnzymeType_text" Canvas.Left="450" Canvas.Top="410" Text="Type of enzyme" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="100" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_EnzymeType" Canvas.Left="550" Canvas.Top="406" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="220" Background="#66E3F907"/>
+
+                        <TextBlock x:Name="EK1_V0a_text" Canvas.Left="450" Canvas.Top="440" Text="At this concentration of substrate, the v0 of the reaction is" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="200" Height="40" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_V0" Canvas.Left="670" Canvas.Top="446" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+                        <TextBlock x:Name="EK1_V0b_text" Canvas.Left="770" Canvas.Top="450" Text=" dA/min =" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="65" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBox x:Name="EK1_Vmoli" Canvas.Left="837" Canvas.Top="446" FontSize="12" TextWrapping="Wrap" FontWeight="Normal" Height="24" HorizontalContentAlignment="Right" Margin="0,0,0,0" IsReadOnly="True" IsTabStop="False" IsTextPredictionEnabled="False" MinHeight="24" MinWidth="63" Width="100" Background="#66E3F907"/>
+                        <TextBlock x:Name="EK1_V0c_text" Canvas.Left="937" Canvas.Top="450" Text=" m" FontFamily="Symbol" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="65" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+                        <TextBlock x:Name="EK1_V0d_text" Canvas.Left="949" Canvas.Top="450" Text="moli/min" FontSize="12" TextWrapping="Wrap" FontWeight="Bold" Width="65" Height="20" HorizontalTextAlignment="Left" Margin="0,0,0,0"/>
+
+                    </Canvas>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem x:Uid="Tabbed_PivotItem2">
+                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+                    <!--
+                    The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                    Place your content here.
+                    -->
+
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
