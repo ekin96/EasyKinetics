@@ -1,0 +1,26 @@
+# Easy Kinetics
+#
+# Installation Guide
+#
+# To install Easy Kinetics, follow these instrauctions:
+#   1 - Download the file EasyKinetics_4.1.1.0_x64.appx
+#   2 - Open the downloaded file and follow the installation 
+# instructions
+#
+# Easy Kinetics Guide
+#
+# Open the app EasyKinetics in the Start menu.
+#
+# When starting, the app opens a pop-up showing the
+# Open Source license conditions: the user can read
+# the license content pushing the button License.
+#
+# Closing the license pop-up the user enters the app
+# platform. Clear buttons allow the user to enter the
+# different analyses:
+# - Simple Enzyme Kinetics
+# - Inhibition Kinetics
+# - Enzymatic Units Assay
+# - Calculation of dAbs/min
+# - Bradford Assay
+
