@@ -39,7 +39,7 @@ Once calculated <img src="https://render.githubusercontent.com/render/math?math=
 
 Inverting the two previous values, <img src="https://render.githubusercontent.com/render/math?math=K_m"> and <img src="https://render.githubusercontent.com/render/math?math=V_{max}"> will be finally found and from there by subsequent biochemical relations the other kinetic parameters will be deduced [8-11].
 
-![Fig 1. Graphical trigonometric demonstration of the Km and Vmax evaluation based on Lineweaver-Burk reciprocal plot](Fig1.tiff)
+![Fig 1. Graphical trigonometric demonstration of the Km and Vmax evaluation based on Lineweaver-Burk reciprocal plot](Fig1.jpg)
 
 Since Easy Kinetics receives in input only two spectrophotometric measurements, despite being performed twice, if one of these measures is anomalous, it won’t be corrected by other measurements as occurs with regression models; so the software may fall in error. Thus to minimize experimental bias the algorithm is implemented to consider the ∆Abs/min at one substrate concentration only if both the duplicates fall within the range of their mean ± 10% of their average, otherwise the software suggest to repeat these measurements for the substrate concentration considered.
 
