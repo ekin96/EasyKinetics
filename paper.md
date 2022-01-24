@@ -1,19 +1,23 @@
 ---
 title: 'Easy Kinetics: a novel enzyme kinetic characterization software'
+
 tags:
   - C# 
   - Enzymology
   - computational kinetics
+
 authors:
   - name: Gabriele Morabito
-    affiliation: "1" 
+  - affiliation: 1 
   
 affiliations:
  - Leibniz Institute on Ageing, Beutenbergstraße 11, Jena, Germany
-   index: 1
+ - index: 1
  
 date: 24 January 2021
 bibliography: paper.bib
+
+--------
 
 # Summary
 Easy Kinetics is an open source software that allows the rapid evaluation of the main kinetics parameters in an enzymatic reaction. In contrast to other similar commercial software that use algorithms based on regression models, known to have several limitations [1], Easy Kinetics uses a novel original algorithm based on a trigonometric demonstration, requiring in input the spectrophotometric measurements of ∆Abs/min taken twice at only two different substrate concentrations. The results generated show a significant concordance with those ones obtained with the most common commercial software used for enzyme kinetics characterization, GraphPad Prism 8 [2], suggesting that Easy Kinetics can be used for routine tests in enzyme kinetics as an alternative valid software.
