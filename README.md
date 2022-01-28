@@ -22,4 +22,4 @@ Furthermore Easy Kinetics has been implemented to perform:
 
 Finally the software is optimized to self-detect possible substrate-inhibition kinetics and to self-correct any typing errors (eg. * or a) in the various input fields.
 
-![](Fig.3)
+![](Fig.3.jpg)
