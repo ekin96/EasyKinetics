@@ -54,7 +54,7 @@ Since Easy Kinetics receives in input only two spectrophotometric measurements, 
 
 In order to show Easy Kinetics accuracy in the evaluation of the main kinetic parameter, several time series absorbances were acquired for the enzymes aldehyde dehydrogenase and xanthine oxidase at different concentrations of several limiting substrates for the reaction they catalyzed (Tab.1, Fig.2A). 
 
-![](Tab1.jpg)
+![](Tab.1.jpg)
 **Tab.1** Experimentally measured ∆Abs/min values for several substrate’s concentrations in the enzyme’s catalyzed reactions tested. 
 
 
